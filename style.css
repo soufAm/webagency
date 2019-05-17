@@ -1,0 +1,24 @@
+.container {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.header {
+    display: inline;
+}
+
+.onglets_header {
+  float: right;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.onglets_header li {
+    margin-left: 10px;
+}
+
+.onglets_header li:hover {
+    border-top: 2px solid blue;
+    /* Changer la couleur du hover avec celle de la maquette ! */
+}
