@@ -6,23 +6,174 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WebAgency</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
     <!-- header -->
     <header>
-        <div class="container header">
-            <img class="img_logo" src="./img/logo.png" alt="Logo WebAgency">
-            <ul class="onglets_header">
-                <!-- changer le ul en nav -->
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav class="container">
+            <a href="#accueil"><img id="logo" src="./img/logo.png" alt="Logo WebAgency"></a> 
+            <ul>
+                <li class="onglet_nav"><a href="#accueil">Accueil</a></li>
+                <li class="onglet_nav"><a href="#services">Services</a></li>
+                <li class="onglet_nav"><a href="#portfolio">Portfolio</a></li>
+                <li class="onglet_nav"><a href="#contact">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <!-- section 1 slider ?? -->
-    <section id="accueil"></section>
+
+
+    <!-- section 1 slider -->
+    <!-- METTRE HOVER SUR LES BOUTONS DES SLIDES -->
+    <div class="slider">
+        <ul>
+            <li id="no-js-slider-1" class="slide">
+                <a class="prev" href="#no-js-slider-2">prev</a>
+                <div id="bloc_texte_slide">
+                    <!-- Bloc d'écriture dans le slide -->
+                    <h1><span id="titre_slide">WEBAGENCY</span>: L'AGENCE DE </br> TOUS VOS PROJETS !</h1>
+                    <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+                    <span class="bouton"><a href="#services">Plus d'infos</a></span>
+                </div>
+                <a class="next" href="#no-js-slider-2">next</a>
+            </li>
+            <li id="no-js-slider-2" class="slide">
+                <a class="prev" href="#no-js-slider-1">prev</a>
+                <div id="bloc_texte_slide">
+                    <!-- Bloc d'écriture dans le slide -->
+                    <h1><span id="titre_slide">WEBAGENCY</span>: L'AGENCE DE </br> TOUS VOS PROJETS !</h1>
+                    <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+                    <span class="bouton"><a href="#services">Plus d'infos</a></span>
+                </div>
+                <a class="next" href="#no-js-slider-1">next</a>       
+            </li>
+        </ul>
+    </div>
+
+
+
+    <!-- section 2 services -->
+    <section id="services" class="container">
+        <div class="bloc_services1">
+            <h1>NOS SERVICES</h1>
+            <!-- Trait de séparation -->
+            <div class="forme_trait">
+                <hr>
+                <i class="fas fa-circle"></i>
+                <hr>
+            </div>
+            <p>Fort de nos expériences et qualifications, nos équipes se mobiliserons afin de concrétiser vos projets. La coordination rigoureuse et le contrôle qualité systématique de la chaine de production vise votre satisfaction finale.</p>
+        </div>
+        <div class="bloc_services2">
+            <img id="img_pc" src="./img/main-feature.png" alt="image pc">
+            <div id="description_service">
+                <ul>
+                    <li>
+                        <div class="bloc_icone">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                            <i class="fas fa-circle puce_icone"></i>
+                        </div>
+                        <div class="bloc_texte_services">
+                            <h3>UX design</h3>
+                            L'ensemble de nos projets sont réalisés par cette méthodologie ingénieuse liant design, ergonomie et optimisation dans l'unique but de maximiser au mieux l'expérience utilisateur.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bloc_icone">
+                            <i class="fas fa-cubes fa-2x"></i>
+                            <i class="fas fa-circle puce_icone"></i>
+                        </div>
+                        <div class="bloc_texte_services">
+                            <h3>UI design</h3>
+                            <p>Cette stratégie visant à améliorer l'interface graphique d'un site web est employée par nos services, toujours dans l'optique d'améliorer l'expérience utilisateur.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bloc_icone">
+                            <i class="fas fa-chart-pie fa-2x"></i>
+                            <i class="fas fa-circle puce_icone"></i>
+                        </div>
+                        <div class="bloc_texte_services">
+                            <h3>SEO</h3>
+                            <p>L'optimisation du référencement de votre site est primordiable pour votre visibilité dans les moteurs de recherche.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <!-- !!! NE PAS OUBLIER DE METTRE LES LIENS DES ONGLETS VERS LES ID !!!! -->
+
+
+    <!-- section 3 projets -->
+    <section id="portfolio">
+        <div class="bloc_services1" class="container">
+            <h1>NOS PROJETS</h1>
+            <!-- Trait de séparation -->
+            <div class="forme_trait">
+                <hr>
+                <i class="fas fa-circle"></i>
+                <hr>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsum autem harum mollitia repellat quibusdam voluptatibus culpa sunt voluptatum odio, quo incidunt?</p>
+        </div>
+        <ul id="filtre_portfolio">
+            <li><a href="">All Works</a><i class="fas fa-sort-down fa-2x"></i></li>
+            <li><a href="">Creative</a><i class="fas fa-sort-down fa-2x"></i></li>
+            <li><a href="">Corporate</a><i class="fas fa-sort-down fa-2x"></i></li>
+            <li>   
+                <a href="">Portfolio<i class="fas fa-sort-down fa-2x"></i></a>
+            </li>
+        </ul>
+        <div id="images_portfolio">
+            <img id="img1" src="./img/portfolio/01.jpg" alt="portfolio 1">
+            <img src="./img/portfolio/02.jpg" alt="portfolio 2">
+            <img src="./img/portfolio/03.jpg" alt="portfolio 3">
+            <img src="./img/portfolio/04.jpg" alt="portfolio 4">
+            <img src="./img/portfolio/05.jpg" alt="portfolio 5">
+            <img src="./img/portfolio/06.jpg" alt="portfolio 6">
+            <img src="./img/portfolio/07.jpg" alt="portfolio 7">
+            <img src="./img/portfolio/08.jpg" alt="portfolio 8">
+        </div>
+    </section>
+
+    <!-- section 4 footer -->
+    <footer id="contact">
+        <!-- formulaire de contact -->
+        <div class="form_contact">
+            <fieldset>
+                <h2>Contact info</h2>
+                <div id="texte_form">
+                    <h3>WebAgency SAS</h3>
+                    <p>25 Rue d'Hauteville 75010 Paris</p>
+                    <p><span id="pointille">Tel:</span> 01 02 03 04 05</p>
+                </div>
+                <form action="post">
+                    <p>
+                        <input class="input_form" type="text" name="name" placeholder="Name" required>
+                    </p>
+                    <p>
+                        <input class="input_form" type="email" name="email" placeholder="Email" required>
+                    </p>
+                    <p>
+                        <input class="input_form" type="text" name="subject" placeholder="Subject" required>
+                    </p>
+                    <p>
+                        <textarea class="input_form" name="message" placeholder="Message" rows="8" required></textarea>
+                    </p>
+                    <input type="submit" class="bouton" value="Send message"></input>
+                </form>
+            </fieldset>
+        </div>
+        <!-- Google map-->
+            <!-- PETITE -->
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.7138082694187!2d2.347632084820937!3d48.873519914420164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1442c049bb%3A0x30a290491097f07f!2sWebAgency+SAS!5e0!3m2!1sfr!2sbe!4v1558352992520!5m2!1sfr!2sbe" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+            <!-- MOYENNE -->
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.7138082694187!2d2.347632084820937!3d48.873519914420164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1442c049bb%3A0x30a290491097f07f!2sWebAgency+SAS!5e0!3m2!1sfr!2sbe!4v1558352992520!5m2!1sfr!2sbe" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+            <!-- GRANDE -->
+            <div id="bg_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.7138082694187!2d2.347632084820937!3d48.873519914420164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1442c049bb%3A0x30a290491097f07f!2sWebAgency+SAS!5e0!3m2!1sfr!2sbe!4v1558352992520!5m2!1sfr!2sbe" width="1200" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+    </footer>
 </body>
 </html>
