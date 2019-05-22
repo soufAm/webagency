@@ -21,48 +21,56 @@
             </ul>
         </nav>
     </header>
-
-<!-- A SUPPRIMER -->
-    <header id="header_marge">
-        <nav class="container">
-            <a href="#accueil"><img id="logo" src="./img/logo.png" alt="Logo WebAgency"></a> 
-            <ul>
-                <li class="onglet_nav"><a href="#accueil">Accueil</a></li>
-                <li class="onglet_nav"><a href="#services">Services</a></li>
-                <li class="onglet_nav"><a href="#portfolio">Portfolio</a></li>
-                <li class="onglet_nav"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <!-- section 1 accueil -->
+    
     <section id="accueil">
-            <!-- slide 1 -->
-            <li id="slider_1">
-                <!-- bouton gauche slide -->
-                <a class="gauche" href="#slider_2"><i class="fas fa-chevron-circle-left fa-3x"></i></a> 
-                <!-- Bloc d'écriture dans le slide -->
-                <div id="bloc_texte_slide">
-                   <h1><span id="titre_slide">WEBAGENCY</span>: L'AGENCE DE </br> TOUS VOS PROJETS !</h1>
+        <input type="radio" name="images" id="i1" checked>
+        <input type="radio" name="images" id="i2" checked>
+        
+            <div class="slide_img" id="one">
+                <img src="./img/slider/bg1.jpg" alt="slide 1">
+                <label for="i2" class="pre">
+                    <i class="fas fa-chevron-left fa-2x"></i>
+                </label>
+                <label for="i2" class="next">
+                    <i class="fas fa-chevron-right fa-2x"></i>
+                </label>
+            </div>
+            <div class="slide_img" id="two">
+                <img src="./img/slider/bg2.jpg" alt="slide 2">
+                <label for="i1" class="pre">
+                    <i class="fas fa-chevron-left fa-2x"></i>
+                </label>
+                <label for="i1" class="next">
+                    <i class="fas fa-chevron-right fa-2x"></i>
+                </label>
+            </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- section 1 A SUPPRIMER -->
+    <!-- <section id="accueil">
+            
+        <div id="slide1"> -->
+            <!-- Bloc d'écriture dans le slide -->
+            <!-- <div class="bloc_texte_slide">
+                <h1><span class="titre_slide">WEBAGENCY</span>: L'AGENCE DE TOUS <br/> VOS PROJETS !</h1>
+                <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+                <span class="bouton"><a href="#services">Plus d'infos</a></span>
+            </div>
+            <div id="slide2">
+                <div class="bloc_texte_slide bloc_texte_slide2">
+                    <h1><span class="titre_slide">WEBAGENCY</span>: L'AGENCE DE TOUS <br/> VOS PROJETS !</h1>
                     <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
                     <span class="bouton"><a href="#services">Plus d'infos</a></span>
                 </div>
-                <a class="droite" href="#slider_2"><i class="fas fa-chevron-circle-right fa-3x"></i></a>
-            </li>
-            <!-- slide 2 -->
-            <li id="slider_2">
-                <!-- bouton gauche slide -->
-                <a class="gauche" href="#slider_1"><i class="fas fa-chevron-circle-left fa-3x"></i></a> 
-                <!-- Bloc d'écriture dans le slide -->
-                <div id="bloc_texte_slide">
-                    <h1><span id="titre_slide">WEBAGENCY</span>: L'AGENCE DE </br> TOUS VOS PROJETS !</h1>
-                    <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
-                    <span class="bouton"><a href="#services">Plus d'infos</a></span>
-              </div>
-                <a class="droite" href="#slider_1"><i class="fas fa-chevron-circle-right fa-3x"></i></a>
-            </li>
-    </section>
+            </div>
+        </div>
+    </section> -->
 
 
     <!-- section 2 services -->
@@ -72,7 +80,7 @@
             <!-- Trait de séparation -->
             <div class="forme_trait">
                 <hr>
-                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle cercle"></i>
                 <hr>
             </div>
             <p>Fort de nos expériences et qualifications, nos équipes se mobiliserons afin de concrétiser vos projets. La coordination rigoureuse et le contrôle qualité systématique de la chaine de production vise votre satisfaction finale.</p>
@@ -115,17 +123,15 @@
             </div>
         </div>
     </section>
-    <!-- !!! NE PAS OUBLIER DE METTRE LES LIENS DES ONGLETS VERS LES ID !!!! -->
-
 
     <!-- section 3 projets -->
     <section id="portfolio">
-        <div class="bloc_services1" class="container">
+        <div class="bloc_services1 container">
             <h1>NOS PROJETS</h1>
             <!-- Trait de séparation -->
             <div class="forme_trait">
                 <hr>
-                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle cercle"></i>
                 <hr>
             </div>
             <p>Vous trouverez ci-dessous les différents projets réalisés par nos soins.</p>
@@ -138,15 +144,91 @@
                 <a href="#">Portfolio<i class="fas fa-sort-down fa-2x"></i></a>
             </li>
         </ul>
-        <div id="images_portfolio">
-            <img id="img1" src="./img/portfolio/01.jpg" alt="portfolio 1">
-            <img src="./img/portfolio/02.jpg" alt="portfolio 2">
-            <img src="./img/portfolio/03.jpg" alt="portfolio 3">
-            <img src="./img/portfolio/04.jpg" alt="portfolio 4">
-            <img src="./img/portfolio/05.jpg" alt="portfolio 5">
-            <img src="./img/portfolio/06.jpg" alt="portfolio 6">
-            <img src="./img/portfolio/07.jpg" alt="portfolio 7">
-            <img src="./img/portfolio/08.jpg" alt="portfolio 8">
+
+        <!-- partie images portfolio -->
+
+        <div id="bloc_images_portfolio">
+            <div class="images_portfolio">
+                <img src="./img/portfolio/01.jpg" alt="portfolio 1">
+                <div class="on_img">
+                    <div class="bloc_texte_hover">
+                        <h2>Woody Nella</h2>
+                        <p>Réalisateur - Scénariste</p>
+                        <a href="#"><i class="far fa-eye fa-1x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="images_portfolio">
+                <img src="./img/portfolio/02.jpg" alt="portfolio 2">
+                <div class="on_img">
+                    <div class="bloc_texte_hover">
+                        <h2>Bunny Man</h2>
+                        <p>Evènement pictural</p>
+                        <a href="#"><i class="far fa-eye fa-1x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="images_portfolio">
+                <img src="./img/portfolio/03.jpg" alt="portfolio 3">
+                <div class="on_img">
+                    <div class="bloc_texte_hover">
+                        <h2>Pampadour</h2>
+                        <p>Boutique en ligne de prêt à porter</p>
+                        <a href="#"><i class="far fa-eye fa-1x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="images_portfolio">
+                <img src="./img/portfolio/04.jpg" alt="portfolio 4">
+                <div class="on_img">
+                    <div class="bloc_texte_hover">
+                        <h2>Design Me</h2>
+                        <p>Agence de graphisme</p>
+                        <a href="#"><i class="far fa-eye fa-1x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="images_portfolio">
+                <img src="./img/portfolio/05.jpg" alt="portfolio 5">
+                <div class="on_img">
+                    <div class="bloc_texte_hover">
+                        <h2>Zalenzo</h2>
+                        <p>E-commerce</p>
+                        <a href="#"><i class="far fa-eye fa-1x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="images_portfolio">
+                <img src="./img/portfolio/06.jpg" alt="portfolio 6">
+                <div class="on_img">
+                    <div class="bloc_texte_hover">
+                        <h2>World Travel</h2>
+                        <p>Agence de voyage en ligne</p>
+                        <a href="#"><i class="far fa-eye fa-1x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="images_portfolio">
+                <img src="./img/portfolio/07.jpg" alt="portfolio 7">
+                <div class="on_img">
+                    <div class="bloc_texte_hover">
+                        <h2>VIV</h2>
+                        <p>Agence évènementielle</p>
+                        <a href="#"><i class="far fa-eye fa-1x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="images_portfolio">
+                <img src="./img/portfolio/08.jpg" alt="portfolio 8">
+                <div class="on_img">
+                    <div class="bloc_texte_hover">
+                        <h2>Organize your life</h2>
+                        <p>Coaching profesionnel</p>
+                        <a href="#"><i class="far fa-eye fa-1x"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -174,7 +256,7 @@
                     <p>
                         <textarea class="input_form" name="message" placeholder="Message" rows="8" required></textarea>
                     </p>
-                    <input type="submit" class="bouton" value="Send message"></input>
+                    <input type="submit" class="bouton" value="Send message">
                 </form>
             </fieldset>
         </div>
@@ -187,7 +269,7 @@
             <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.7138082694187!2d2.347632084820937!3d48.873519914420164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1442c049bb%3A0x30a290491097f07f!2sWebAgency+SAS!5e0!3m2!1sfr!2sbe!4v1558352992520!5m2!1sfr!2sbe" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 
             <!-- GRANDE MAP-->
-            <div id="bg_map">
+            <div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.7138082694187!2d2.347632084820937!3d48.873519914420164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1442c049bb%3A0x30a290491097f07f!2sWebAgency+SAS!5e0!3m2!1sfr!2sbe!4v1558352992520!5m2!1sfr!2sbe" width="1200" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
     </footer>

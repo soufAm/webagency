@@ -1,3 +1,5 @@
+/* fontface */
+
 /* h2 */
 @font-face {
   font-family: 'Roboto-Black';
@@ -22,7 +24,7 @@
   src: url('./fonts/Roboto-Medium.ttf');  
 }
 
-/* police texte li   */
+/* police texte li*/
 @font-face{
   font-family: 'Roboto-Regular';
   src: url('./fonts/Roboto-Regular.ttf');
@@ -34,6 +36,17 @@
   src: url('./fonts/Roboto-Thin.ttf');
 }
 
+/* keyframes */
+@keyframes slider {
+  0% {transform: translateX(0%)}
+  25% {transform: translateX(0%)}
+  50% {transform: translateX(100%)}
+  75% {transform: translateX(100%)}    
+  100% {transform: translateX(0%)}
+}
+
+
+/* GENERAL */
 
 body {
   width: 100%;
@@ -50,7 +63,11 @@ hr{
   width: 10%;
   height: 1px;
   border: none;
-  vertical-align: middle; 
+  vertical-align: middle;
+  margin-right: 3px;
+  margin-left: 3px;
+  margin-top: 12px;
+
 }
 
 h1 {
@@ -69,14 +86,9 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* A SUPPRIMER */
-#header_marge{
-  width: 100%;
-  height: 60px;
-  top: 0;
-  left: 0;
-  position: relative;
-  z-index:0;
+.cercle {
+  border: 5px solid white;
+  border-radius: 100%;
 }
 
 /* HEADER */
@@ -87,7 +99,7 @@ header{
   height: 100px;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 99;
 }
 
 nav {
@@ -115,79 +127,64 @@ nav ul li {
   border-top: 3px solid #4EB1D5;
 }
 
-/* SECTION 1 A GARDER */
-#slider_1 {
-  background-image: url('./img/slider/bg1.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 580px;
-  list-style: none;
+
+/* SECTION 1*/
+
+#accueil {
+  width: 100%;
+  height: 800px;
+  background-color: rgba(128, 128, 128, 0.466);
 }
 
-a.gauche {
+.slide_img {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  bottom: 0;
+  z-index: -1
+}
+
+#i1:checked ~#one,
+#i2:checked ~#two{
+  z-index: 9;
+}
+
+.slide_img img {
+  width: 100%;
+}
+
+.pre{
+  color: white;
+  position: absolute;
+  top: 270px;
   left: 0;
-  margin-top: 290px;
-  color: rgba(128, 128, 128, 0.787);
+  z-index: 10;
   cursor: pointer;
 }
 
-a.droite {
+.next{
+  color: white;
   position: absolute;
+  top: 270px;
   right: 0;
-  margin-top: 140px;
-  color: rgba(128, 128, 128, 0.787);
+  z-index: 10;
   cursor: pointer;
 }
 
-#slider_2 {
-  background-image: url('./img/slider/bg2.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 580px;
-  list-style: none;
+/* SECTION 2 SERVICES*/
 
+#services {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-
-#titre_slide {
-  color: #4EB1D5;
-}
-
-#bloc_texte_slide {
-  margin-left: 150px;
-  position: absolute;
-  top: 25%;
-  color: white;
-}
-
-#bloc_texte_slide p {
-  margin-bottom: 30px;
-}
-
-.bouton {
-  background-color: #4EB1D5;
-  padding: 10px;
-  border-radius: 4%;
-  box-shadow: 0px 2px 2px 1px rgb(56, 140, 170);
-}
-
-.bouton a {
-  text-decoration: none;
-  color: white;
-} */
-
-
-
-
-
-/* SECTION 2 */
 
 .forme_trait {
-  display: flex !important;
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  /* margin: 2%; */
 }
+
 .forme_trait i {
   color: #4EB1D5;
 }
@@ -256,7 +253,7 @@ a.droite {
 }
 
 .bloc_texte_services {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .puce_icone {
@@ -267,20 +264,12 @@ a.droite {
 }
 
 
-/* SECTION 3 */
+/* SECTION 3 PROJETS */
 
 #portfolio {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-#portfolio img{
-  max-width: 350px;
-  max-height: 250px;
-  margin: 20px;
-}
-
-#portfolio img:hover{
-  opacity: 0.4;
+  background-color: #f5f5f5;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #filtre_portfolio {
@@ -290,6 +279,7 @@ a.droite {
   justify-content: center;
   flex-wrap: nowrap;
   font-family: 'Roboto-Regular';
+  padding-left: 0;
 }
 
 #filtre_portfolio li {
@@ -312,12 +302,12 @@ a.droite {
   color: rgb(56, 140, 170);
 }
 
-/* fleche du bas bouton filtre portfolio */
+    /* flèche du bas bouton filtre portfolio */
 .fa-sort-down {
   position: absolute;
   margin-top: 17px;
   left: 40px;
-  color: white;
+  color: #f5f5f5;
 }
 
 #filtre_portfolio li a{
@@ -325,30 +315,102 @@ a.droite {
   text-decoration: none;
 }
 
-#images_portfolio{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  /* bloc images en portfolio */
 
-#img1:hover {
-  background-image: url("./img/portfolio/01.jpg");
-  opacity: 1;
+  #bloc_images_portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .images_portfolio img{
+    display: block;
+    width: 350px;
+    height: 250px;
+    margin: 20px;
+    padding: 0;
+    cursor: default;
+  }
+  
+  .images_portfolio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+
+  .images_portfolio:hover .on_img{
+    height: 90px;
+  }
+  
+  .images_portfolio:hover .bloc_texte_hover{
+    height: 90px;
+    z-index: 4;
+  }
+
+  /* bloc texte en div hover sur les images en portfolio */
+
+.bloc_texte_hover {
+  position: relative;
+  height: 0;
+  z-index: -1;
   width: 100%;
-  height: 100%;
+  margin: 30px;
+  margin-bottom: 50px;
 }
 
-.hover_img:hover {
-  background-color: black;
-  opacity: 0;
+.bloc_texte_hover h2 {
+  font-size: 22px;
+  font-family: 'Roboto-Bold';
 }
+
+.bloc_texte_hover p {
+  font-size: 16px;
+  font-family: 'Roboto-Regular';
+}
+
+.bloc_texte_hover a {
+  position: absolute;
+  top: -21px;
+  margin-left: 80%;
+}
+
+.bloc_texte_hover:hover {
+  position: relative;
+  height: 100px;
+}
+
+.on_img {
+  width: 350px;
+  height: 0px;
+  background-color: rgba(0, 0, 0, 0.342);
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  transition: 0.7s ease;
+  overflow: visible;
+  margin-bottom: 20px;
+}
+
+.fa-eye {
+  color: white;
+  background-color: rgb(56, 140, 170);
+  border-radius: 100%;
+  border: solid 2px white;
+  padding: 15px;
+}
+
 
 /* SECTION 4 FOOTER */
 
 #contact iframe {
   width: 100%;
-  z-index: -5;
   position: relative;
 }
 
@@ -395,10 +457,6 @@ textarea{
   font-family: 'Roboto-Bold';
 }
 
-#bg_map {
-  background-color: rgba(0, 139, 199, 0.287);
-}
-
 #pointille {
   text-decoration: dashed underline;
-}
+}   
