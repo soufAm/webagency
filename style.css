@@ -36,20 +36,13 @@
   src: url('./fonts/Roboto-Thin.ttf');
 }
 
-/* keyframes */
-@keyframes slider {
-  0% {transform: translateX(0%)}
-  25% {transform: translateX(0%)}
-  50% {transform: translateX(100%)}
-  75% {transform: translateX(100%)}    
-  100% {transform: translateX(0%)}
-}
-
 
 /* GENERAL */
 
 body {
   width: 100%;
+  max-width: 1920px;
+  min-width: 320px;
   margin: 0;
 }
 
@@ -91,14 +84,16 @@ h2 {
   border-radius: 100%;
 }
 
+#titre_petite_resolution{
+  display: none;
+}
+
 /* HEADER */
 header{
   position: fixed;
   background-color: white;
   width: 100%;
   height: 100px;
-  top: 0;
-  left: 0;
   z-index: 99;
 }
 
@@ -120,7 +115,6 @@ nav ul li {
   padding-top: 38px;
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
 .onglet_nav a:hover {
@@ -133,7 +127,7 @@ nav ul li {
 #accueil {
   width: 100%;
   height: 800px;
-  background-color: rgba(128, 128, 128, 0.466);
+  background-color: #f5f5f5;
 }
 
 .slide_img {
@@ -142,16 +136,12 @@ nav ul li {
   height: 100%;
   top: 100px;
   bottom: 0;
-  z-index: -1
+  z-index: -1;
 }
 
 #i1:checked ~#one,
 #i2:checked ~#two{
   z-index: 9;
-}
-
-.slide_img img {
-  width: 100%;
 }
 
 .pre{
@@ -170,6 +160,52 @@ nav ul li {
   right: 0;
   z-index: 10;
   cursor: pointer;
+}
+
+/* bloc texte slider */
+.bloc_texte_slider{
+  background-size: 100%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: white;
+}
+
+.bloc_texte_slider h1 {
+  font-size: 45px;
+}
+
+.bloc_texte_slider p {
+  font-size: 20px;
+  font-family: 'Roboto-Regular';
+  margin-bottom: 40px;
+}
+
+.bloc_texte_slider span {
+  color: #4EB1D5;
+}
+
+.bloc_texte_slider a {
+  background-color: #4EB1D5;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 14px;
+  color: white;
+  border-radius: 3%;
+  box-shadow: 0px 2px 2px 1px rgb(56, 140, 170);
+  font-family: 'Roboto-Bold';
+}
+
+#one{
+  background-image: url('./img/slider/bg2.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#two{
+  background-image: url('./img/slider/bg1.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /* SECTION 2 SERVICES*/
@@ -453,10 +489,175 @@ textarea{
 
 .bouton {
   color: white;
+  background-color: #4EB1D5;
+  box-shadow: 0px 2px 2px 1px rgb(56, 140, 170);
   border: none;
   font-family: 'Roboto-Bold';
+  padding: 10px;
 }
 
 #pointille {
   text-decoration: dashed underline;
 }   
+
+
+
+
+/* media query */
+
+@media screen and (max-width: 1445px){
+  #accueil {
+    height: 700px;
+  }
+
+  .form_contact{
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #bloc_texte_footer, fieldset{
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 1350px){
+  #accueil {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 1050px){
+  .container {
+    margin: 0;
+  }
+    /* header */
+
+    header {
+      height: 120px;
+    }
+  
+    .onglet_nav a {
+      font-family: 'Roboto-Regular';
+      font-size: 23px;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    nav a {
+      text-align: center;
+    }
+    
+    nav ul {
+      float: none;
+      text-align: center;
+    }
+  
+    nav ul li {
+      margin-left: 15px;
+      margin-right: 15px;
+  
+    }
+    #accueil img {
+      position: absolute;
+      left: 20%;
+    }
+
+    .onglet_nav a:hover {
+      border: none;
+      color: #4EB1D5;
+    }
+
+    #accueil {
+      display: none;
+    }
+
+    .bloc_services2 {
+    flex-wrap: wrap;
+  }
+
+    #img_pc {
+    margin-left: 20%;
+  }
+
+    #description_service {
+    padding-right: 40px; 
+  }
+  
+    .bloc_services1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #services{
+    padding-top: 130px;
+  }
+
+  #titre_petite_resolution{
+    display: contents;
+    font-size: 50px;
+  }
+}
+
+
+@media screen and (max-width: 698px){
+  /* Général */
+  .container{
+    margin: 0;
+  }
+
+  /* header */
+
+  header {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    height: auto;
+  }
+
+  .onglet_nav a {
+    font-size: 18px;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    padding-top: 6px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  #img_pc{
+    width: 405px;
+    height: 250px;
+    margin-left: 15%;
+  } 
+  
+}
+  
+@media screen and (max-width: 570px){
+  .bloc_services1 p {
+    margin-left: 20px;
+    margin-right: 20px;    
+  }  
+}
+
+@media screen and (max-width: 393px){
+  #filtre_portfolio li {
+    text-align: center;
+  }
+
+  .fa-sort-down {
+    margin-top: 35px;
+  }
+
+  #fleche_media {
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,29 @@
+/* Général */
+.container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+nav ul {
+    float: none;
+}
+
+.onglet_nav a:hover {
+    border-top:none;
+    color: #4EB1D5;
+}
+
+/* header */
+
+header {
+  height: 150px;
+}
+
+.onglet_nav a {
+    font-family: 'Roboto-Regular';
+}
+
+#accueil img {
+    position: absolute;
+    left: 20%;
+}
