@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WebAgency</title>
     <link rel="stylesheet" href="./style.css">
-    <!-- <link rel="stylesheet" media="screen and (max-width: 768px)" href="./petite_resolution.css"> -->
-    <!-- <link rel="stylesheet" media="screen and (max-width: 991px)" href="./moyenne_resolution.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
@@ -23,46 +21,49 @@
             </ul>
         </nav>
     </header>
+
     
     <section id="accueil">
         <input type="radio" name="images" id="i1" checked>
-        <input type="radio" name="images" id="i2" checked>
+        <input type="radio" name="images" id="i2" >
         
-            <div class="slide_img" id="one">
-                <div class="bloc_texte_slider">
-                    <h1><span>WEBAGENCY </span>: L'AGENCE DE TOUS <br> VOS PROJETS !</h1>
-                    <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
-                    <a href="#contact">Plus d'infos</a>
-                </div>
-                <label for="i2" class="pre">
+        <div class="slide_img" id="one">
+            <div class="bloc_texte_slider">
+                <h1><span>WEBAGENCY </span>: L'AGENCE DE TOUS <br> VOS PROJETS !</h1>
+                <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+                <a href="#contact">Plus d'infos</a>
+            </div>
+            <label for="i2" class="pre">
                     <i class="fas fa-chevron-left fa-2x"></i>
-                </label>
-                <label for="i2" class="next">
-                    <i class="fas fa-chevron-right fa-2x"></i>
-                </label>
+            </label>
+            <label for="i2" class="next">
+                <i class="fas fa-chevron-right fa-2x"></i>
+            </label>
             </div>
             <div class="slide_img" id="two">
                 <div class="bloc_texte_slider ">
-                    <h1><span>WEBAGENCY </span>: L'AGENCE DE TOUS <br> VOS PROJETS !</h1>
+                    <h1><span>WEBAGENCY </span>: L'ALLIE <br> DE VOTRE REUSSITE !</h1>
                     <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
                     <a href="#services">Plus d'infos</a>
                 </div>
                 <label for="i1" class="pre test">
                     <i class="fas fa-chevron-left fa-2x"></i>
                 </label>
+                <h1 id="titre_petite_resolution">L'AGENCE DE TOUS  VOS PROJETS !</h1>
                 <label for="i1" class="next test">
                     <i class="fas fa-chevron-right fa-2x"></i>
                 </label>
             </div>
-            <div id="barre_chargement">asas</div>
     </section>
 
 
     <!-- section 2 services -->
     <section id="services" class="container">
         <div class="bloc_services1">
-            <h1 id="titre_petite_resolution">L'AGENCE DE TOUS  VOS PROJETS !</h1>
-            <h1 id="titre_services">NOS SERVICES</h1>
+            <div id="bg_petite-reso">
+                <h1 id="titre_petite_resolution">L'AGENCE DE TOUS  VOS PROJETS !</h1>
+            </div>
+                <h1 id="titre_services">NOS SERVICES</h1>
             <!-- Trait de séparation -->
             <div class="forme_trait">
                 <hr>
@@ -82,7 +83,7 @@
                         </div>
                         <div class="bloc_texte_services">
                             <h3>UX design</h3>
-                            <p>L'ensemble de nos projets sont réalisés par cette méthodologie ingénieuse liant design, ergonomie et optimisation dans l'unique but de maximiser au mieux l'expérience utilisateur.</p>
+                            <p>L'ensemble de nos projets, sont réalisés par cette méthodologie ingénieuse liant design, ergonomie et optimisation dans l'unique but de maximiser au mieux l'expérience utilisateur.</p>
                         </div>
                     </li>
                     <li>
@@ -92,7 +93,7 @@
                         </div>
                         <div class="bloc_texte_services">
                             <h3>UI design</h3>
-                            <p>Cette stratégie visant à améliorer l'interface graphique d'un site web est employée par nos services, toujours dans l'optique d'améliorer l'expérience utilisateur.</p>
+                            <p>Cette stratégie visant à améliorer l'interface graphique d'un site web, est employée par nos services, toujours dans l'optique d'améliorer l'expérience utilisateur.</p>
                         </div>
                     </li>
                     <li>
@@ -122,19 +123,27 @@
             </div>
             <p>Vous trouverez ci-dessous les différents projets réalisés par nos soins.</p>
         </div>
+
+        <!-- Filtre element portfolio -->
         <ul id="filtre_portfolio">
-            <li><a href="#">All Works</a><i id="fleche_media" class="fas fa-sort-down fa-2x"></i></li>
-            <li><a href="#">Creative</a><i class="fas fa-sort-down fa-2x"></i></li>
-            <li><a href="#">Corporate</a><i class="fas fa-sort-down fa-2x"></i></li>
+            <li>
+                <a href="">All Works</a><i id="fleche_media" class="fas fa-sort-down fa-2x"></i>
+            </li>
+            <li>
+                <a href="">Creative</a><i class="fas fa-sort-down fa-2x"></i>
+            </li>
+            <li>
+                <a href="">Corporate</a><i class="fas fa-sort-down fa-2x"></i>
+            </li>
             <li>   
-                <a href="#">Portfolio<i class="fas fa-sort-down fa-2x"></i></a>
+                <a href="">Portfolio</a><i class="fas fa-sort-down fa-2x"></i>
             </li>
         </ul>
 
         <!-- partie images portfolio -->
 
         <div id="bloc_images_portfolio">
-            <div class="images_portfolio">
+            <div class="images_portfolio all creative">
                 <img src="./img/portfolio/01.jpg" alt="portfolio 1">
                 <div class="on_img">
                     <div class="bloc_texte_hover">
@@ -144,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            <div class="images_portfolio">
+            <div class="images_portfolio all creative">
                 <img src="./img/portfolio/02.jpg" alt="portfolio 2">
                 <div class="on_img">
                     <div class="bloc_texte_hover">
@@ -154,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <div class="images_portfolio">
+            <div class="images_portfolio all corporate">
                 <img src="./img/portfolio/03.jpg" alt="portfolio 3">
                 <div class="on_img">
                     <div class="bloc_texte_hover">
@@ -164,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <div class="images_portfolio">
+            <div class="images_portfolio all corporate portfolio_filtreur">
                 <img src="./img/portfolio/04.jpg" alt="portfolio 4">
                 <div class="on_img">
                     <div class="bloc_texte_hover">
@@ -174,7 +183,7 @@
                     </div>
                 </div>
             </div>
-            <div class="images_portfolio">
+            <div class="images_portfolio all corporate">
                 <img src="./img/portfolio/05.jpg" alt="portfolio 5">
                 <div class="on_img">
                     <div class="bloc_texte_hover">
@@ -184,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            <div class="images_portfolio">
+            <div class="images_portfolio all corporate">
                 <img src="./img/portfolio/06.jpg" alt="portfolio 6">
                 <div class="on_img">
                     <div class="bloc_texte_hover">
@@ -194,7 +203,7 @@
                     </div>
                 </div>
             </div>
-            <div class="images_portfolio">
+            <div class="images_portfolio all creative">
                 <img src="./img/portfolio/07.jpg" alt="portfolio 7">
                 <div class="on_img">
                     <div class="bloc_texte_hover">
@@ -204,12 +213,12 @@
                     </div>
                 </div>
             </div>
-            <div class="images_portfolio">
+            <div class="images_portfolio all creative portfolio_filtreur">
                 <img src="./img/portfolio/08.jpg" alt="portfolio 8">
                 <div class="on_img">
                     <div class="bloc_texte_hover">
                         <h2>Organize your life</h2>
-                        Vous avez un projet web ? La WebAgency vous aide à le réaliser !             <p>Coaching professionnel</p>
+                        <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>            
                         <a href="#"><i class="far fa-eye fa-1x"></i></a>
                     </div>
                 </div>
@@ -247,8 +256,9 @@
             </fieldset>
         </div>
         <!-- Google map-->
-            <div>
-                <iframe id="map_grande" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.7138082694187!2d2.347632084820937!3d48.873519914420164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1442c049bb%3A0x30a290491097f07f!2sWebAgency+SAS!5e0!3m2!1sfr!2sbe!4v1558352992520!5m2!1sfr!2sbe" width="1200" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div id="map">
+                <iframe id="map_grande" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.7138082694187!2d2.347632084820937!3d48.873519914420164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1442c049bb%3A0x30a290491097f07f!2sWebAgency+SAS!5e0!3m2!1sfr!2sbe!4v1558352992520!5m2!1sfr!2sbe" height="600" style="border:0" allowfullscreen></iframe>
+                <!-- frameborder="0" retirer pour probleme w3c validation -->
             </div>
     </footer>
 </body>
